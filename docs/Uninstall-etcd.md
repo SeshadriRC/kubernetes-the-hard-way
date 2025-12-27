@@ -140,3 +140,13 @@ If you want, next I can:
 * Check **etcd logs if it fails again**
 
 Just say the word 👌
+
+Post that check if etcd is helathy using below command
+
+```
+sudo ETCDCTL_API=3 etcdctl endpoint health \
+  --endpoints=https://127.0.0.1:2379 \
+  --cacert=/etc/etcd/ca.crt \
+  --cert=/etc/etcd/etcd-server.crt \
+  --key=/etc/etcd/etcd-server.key
+```
